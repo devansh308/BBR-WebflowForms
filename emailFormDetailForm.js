@@ -1,6 +1,5 @@
 $("#current-page").val(location.href);
 var dataArray;
-
 $(document).ready(function () {
   $("form#wf-form-Email-Form").on("submit", function (event) {
     var query_string = $(this).serialize();
@@ -96,7 +95,6 @@ $(document).ready(function () {
       },
     });
   }
-
   function hitWebhook_provesource(form_data) {
     $.ajax({
       //url: "https://webhook.site/1a2f6d8b-7f79-40b6-a899-f14c238dc10a",
