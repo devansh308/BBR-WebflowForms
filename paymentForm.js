@@ -28,19 +28,31 @@ $(document).ready(function () {
   function redirectToPaymentPage() {
     var params = window.location.search;
     var url;
+    var emailParam = "&billing_email" + datamail["email"];
     if (params) {
-      url =
-        "https://pay.blackboardradio.com/cartflows_step/checkout" +
-        params +
-        "&billing_phone=" +
-        datamail["Phone"] +
-        "&add-to-cart=24";
+      url = datamail["email"]
+        ? "https://pay.blackboardradio.com/cartflows_step/checkout" +
+          params +
+          "&billing_phone=" +
+          datamail["Phone"] +
+          "&add-to-cart=24" +
+          emailParam
+        : "https://pay.blackboardradio.com/cartflows_step/checkout" +
+          params +
+          "&billing_phone=" +
+          datamail["Phone"] +
+          "&add-to-cart=24";
     } else {
-      url =
-        "https://pay.blackboardradio.com/cartflows_step/checkout" +
-        "?billing_phone=" +
-        datamail["Phone"] +
-        "&add-to-cart=24";
+      url = datamail["email"]
+        ? "https://pay.blackboardradio.com/cartflows_step/checkout" +
+          "?billing_phone=" +
+          datamail["Phone"] +
+          "&add-to-cart=24" +
+          emailParam
+        : "https://pay.blackboardradio.com/cartflows_step/checkout" +
+          "?billing_phone=" +
+          datamail["Phone"] +
+          "&add-to-cart=24";
     }
     window.location.href = url;
   }
