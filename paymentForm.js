@@ -28,7 +28,7 @@ $(document).ready(function () {
   function redirectToPaymentPage() {
     var params = window.location.search;
     var url;
-    var emailParam = "&billing_email" + datamail["email"];
+    var emailParam = "&billing_email=" + datamail["email"];
     if (params) {
       url = datamail["email"]
         ? "https://pay.blackboardradio.com/cartflows_step/checkout" +
