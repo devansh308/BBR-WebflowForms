@@ -35,24 +35,24 @@ $(document).ready(function () {
           params +
           "&billing_phone=" +
           datamail["Phone"] +
-          "&add-to-cart=24" +
+          "&add-to-cart=1515" +
           emailParam
         : "https://pay.blackboardradio.com/cartflows_step/checkout" +
           params +
           "&billing_phone=" +
           datamail["Phone"] +
-          "&add-to-cart=24";
+          "&add-to-cart=1515";
     } else {
       url = datamail["email"]
         ? "https://pay.blackboardradio.com/cartflows_step/checkout" +
           "?billing_phone=" +
           datamail["Phone"] +
-          "&add-to-cart=24" +
+          "&add-to-cart=1515" +
           emailParam
         : "https://pay.blackboardradio.com/cartflows_step/checkout" +
           "?billing_phone=" +
           datamail["Phone"] +
-          "&add-to-cart=24";
+          "&add-to-cart=1515";
     }
     window.location.href = url;
   }
